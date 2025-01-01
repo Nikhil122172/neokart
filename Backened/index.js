@@ -35,7 +35,7 @@ app.use("/user",userRoute);
 app.get("/api/adminData",async(req,res)=>{
   try{
     const data = await ProductData.find();
-    console.log("ye bck data hai->",data);
+    // console.log("ye bck data hai->",data);
     
     res.json(data);
   }catch(err){
@@ -48,16 +48,16 @@ app.post("/api/adminData", async(req,res)=>{
   
     // const fileimg = req.files?.image;
     const fileimg = req.files?.image;
-    console.log("ye fileimg hai->",fileimg);
+    // console.log("ye fileimg hai->",fileimg);
     
     if (!fileimg) {
       return res.status(400).json({ message: "No image file uploaded." });
   }
     // const image = req.file.path;
-    console.log("ye name hai-> ",name);
-    console.log("ye image hai-> ",fileimg);
-    console.log("ye price hai-> ",price);
-    console.log("ye description hai-> ",description);
+    // console.log("ye name hai-> ",name);
+    // console.log("ye image hai-> ",fileimg);
+    // console.log("ye price hai-> ",price);
+    // console.log("ye description hai-> ",description);
   
     // const file = req.files.photo;
     // const uploadRes = await cloudinary.uploader.upload(file.tempFilePath,{folder: "online-Shop"},(err,result)=>{
@@ -68,12 +68,12 @@ app.post("/api/adminData", async(req,res)=>{
     try{
       // const file = image;
       const uploadRes = await cloudinary.uploader.upload(fileimg.tempFilePath,{folder: "online-Shop"},(err,result)=>{
-        console.log("empty files->",result);
-        console.log("empty fileserr->",err);
+        // console.log("empty files->",result);
+        // console.log("empty fileserr->",err);
         
         // console.log("ye return url hai->",uploadRes);
       });
-      console.log("ye return url hai->",uploadRes);
+      // console.log("ye return url hai->",uploadRes);
       // if(image){
       //  const uploadRes = await cloudinary.uploader.upload(image,{
       //     upload_preset: "onlineShop"
@@ -93,7 +93,7 @@ app.post("/api/adminData", async(req,res)=>{
         }
       // }
     }catch(error){
-      console.log(error);
+      // console.log(error);
       res.status(500).send(error);
     }
     
