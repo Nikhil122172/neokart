@@ -16,7 +16,8 @@ import dotenv from 'dotenv';
 const app = express();
 
 dotenv.config();
-app.use(cors());
+// app.use(cors());
+app.use(cors({ origin: 'https://neokart2.onrender.com' })); 
 app.use(express.json());
 app.use(urlencoded({extended:true}));
 app.use(fileUpload(
