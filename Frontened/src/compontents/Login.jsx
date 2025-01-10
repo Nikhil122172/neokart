@@ -3,6 +3,10 @@ import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 
+import dotenv from 'dotenv';
+dotenv.config();
+// const API_B = process.env.APIB_URL;
+
 function Login() {
   const [isOpen, setIsOpen] = useState(true); 
   const [errorMessage, setErrorMessage] = useState("");
@@ -19,7 +23,7 @@ function Login() {
     };
 
     try {
-      const res = await axios.post("http://localhost:4001/user/login", userInfo);
+      const res = await axios.post("https://neokartb2.onrender.com/user/login", userInfo);
       console.log(res.data);
       if (res.data) {
         // alert("Login successful");

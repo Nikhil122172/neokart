@@ -27,7 +27,7 @@ export const productsCreate = createAsyncThunk(
     console.log("ye values hai->",values);
     
     try {
-      const response2 = await axios.post('http://localhost:4001/api/adminData', values, {
+      const response2 = await axios.post('https://neokartb2.onrender.com/api/adminData', values, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

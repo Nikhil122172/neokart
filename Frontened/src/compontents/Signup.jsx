@@ -3,6 +3,9 @@ import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from 'react-toastify';
+import dotenv from 'dotenv';
+dotenv.config();
+// const API_B = process.env.APIB_URL;
 
 function Signup() {
     const { register, handleSubmit, formState: { errors } } = useForm();
@@ -19,7 +22,7 @@ function Signup() {
         setLoading(true);
 
         try {
-            const res = await axios.post("http://localhost:4001/user/signup", userInfo);
+            const res = await axios.post("https://neokartb2.onrender.com/user/signup", userInfo);
             console.log(res.data);
             // alert("Signup successful");
             toast.success("Signup successful",{
