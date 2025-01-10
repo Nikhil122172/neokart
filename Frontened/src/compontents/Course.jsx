@@ -22,7 +22,7 @@ function Course() {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get("http://localhost:4001/api/admindata");
+        const response = await axios.get("https://neokartb2.onrender.com/api/admindata");
         setProduct(response.data);
       } catch (err) {
         console.error("error fetching data", err);

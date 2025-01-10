@@ -90,8 +90,8 @@ function Navbar() {
           </div>
           
           <a className="text-2xl font-extrabold cursor-pointer text-pink-600 ml-5">
-            <span className="text-blue-500">Cloth</span>
-            <span className="text-yellow-500">Haven</span>
+            <span className="text-blue-500">Neo</span>
+            <span className="text-yellow-500">Kart</span>
           </a>
         </div>
 

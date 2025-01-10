@@ -50,8 +50,8 @@ function CartPage() {
             <i className="fas fa-arrow-left text-lg"></i>
           </button>
           <span className="text-3xl font-bold cursor-pointer text-gray-800">
-            <span className="text-blue-500">Cloth</span>
-            <span className="text-yellow-500">Haven</span>
+            <span className="text-blue-500">Neo</span>
+            <span className="text-yellow-500">Kart</span>
           </span>
         </div>
 
